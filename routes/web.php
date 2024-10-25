@@ -15,6 +15,9 @@ Route::get('/posts', [PostController::class, "index"]);
 Route::get('/posts/create', [PostController::class, "create"]);
 //RUTA QUE RECIBE PARAMETRO Y LO PASA AL CONTROLADOR, el controlador debe tener como atributo la variable con el mismo nombre
 Route::get("/posts/{id}", [PostController::class, "show"]);
+Route::get("/home", function(){
+    return view("home");
+});
 
 
 //CREACION DE RUTA CON PARAMETROS Y RETORNANDO UNA FUNCION, NO UN CONTROLADOR
