@@ -8,6 +8,19 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <h1>HOLAAAAA</h1>
+    <div class="max-w-4xl mx-auto px-4">
+        <h1>Hola pa</h1>
+        {{-- LLAMAMOS COMPONENTE DE LA ALERTA , usando x-componentName --}}
+        <x-alert type="danger">
+            {{-- ENVIAREMOS VALOR DE LAS VARIABLES INDICANDO SU NOMBRE PARA REFERENCIARLAS --}}
+            <x-slot name="alertContent">
+                contenido de la alerta
+            </x-slot>
+
+            <x-slot name="alertTittle">
+                titulo de la alerta
+            </x-slot>
+        </x-alert>
+    </div>
 </body>
 </html>
