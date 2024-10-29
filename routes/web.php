@@ -36,12 +36,14 @@ Route::get("/laravel/{variable}",function ($variable){
 Route::get("/prueba", function(){
     // $post = new Post();
     // //PASAR DATOS DE PRUEBA GUARDAR
-    // $post->title = "titulo de pruebita2";
+    // $post->title = "PROBANDO EL MUTAdooor";
     // $post->content = "Contenido de prueba2";
     // $post->categoria = "categoria de prueba2";
 
     // //guardamos la categoria
     // $post->save();
+
+    // return $post;
 
     // //ACTUALIZAR
     // $post = Post::find(1); //SI DESEAMOS BUSCAR POR OTRA COSA PONEMOS Post::where(COLUMNNAME, "ValorABuscar)->first() FIRST NOS TRAE EL PRIMER REGISTRO QUE ENCUENTRE 
