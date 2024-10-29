@@ -12,6 +12,12 @@ class Post extends Model
     //INDICAMOS LA TABLA QUE MAPEARA
     protected $table = 'post';
 
+    //CREAMOS UN CASTING PARA PUBLISHED AT Y ACTIVE
+    protected function casts(): array{
+        return["published_at"=>"timestamp",
+                "is_active"=>"boolean"];   //nombre del campo => nuevo tipo
+    }
+
     //CREAREMOS UN MUTADOR el cual servira para title  EL : Attribute INDICA QUE EL METODO DEBE RETORNAR UNA INSTANCIA DE ESTE
     protected function title(): Attribute{
         return Attribute::make(set: Function($value){ //desde value vamos a recuperar el valor que mande el usuario
