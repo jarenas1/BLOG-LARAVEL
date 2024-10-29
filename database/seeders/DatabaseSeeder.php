@@ -16,5 +16,8 @@ class DatabaseSeeder extends Seeder
     //LLAMAMOS A TODOS LOS SEEDERS CREADOS ANTERIORMENTE
     $this->call([UserSeeder::class,
                 PostSeeder::class]);
+
+                //LLAMADO A FACTORY
+                User::factory(10)->create();
     }
 }
