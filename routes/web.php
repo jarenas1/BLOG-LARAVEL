@@ -13,12 +13,20 @@ Route::get('/controller', [HomeController::class, "index"]);
 Route::get('/posts', [PostController::class, "index"]);
 //mismo controllador de arriba, difetente metodo
 Route::get('/posts/create', [PostController::class, "create"]);
+//RUTA PARA CREAR EL POST 
+Route::post("/posts", [PostController::class, "store"]);
 //RUTA QUE RECIBE PARAMETRO Y LO PASA AL CONTROLADOR, el controlador debe tener como atributo la variable con el mismo nombre
 Route::get("/posts/{id}", [PostController::class, "show"]);
 Route::get("/home", function(){
     return view("home");
 });
 
+Route::get("/post/{post}/edit", [PostController::class, "edit"]);
+
+// RUTA QUE EDITA COMO TAL EL POST
+Route::put("/posts/{post}", [PostController::class, "update"]);
+
+Route::delete('posts/{id}',[PostController::class, "destroy"]);
 
 //CREACION DE RUTA CON PARAMETROS Y RETORNANDO UNA FUNCION, NO UN CONTROLADOR
 Route::get("/laravel/{variable}",function ($variable){
